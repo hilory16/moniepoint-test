@@ -67,6 +67,10 @@ const GlobalStyle = createGlobalStyle`
 
   }
 
+  select{
+    font-family: 'Outfit', sans-serif;
+  }
+
   button {
     cursor: pointer;
     font-family: 'Outfit', sans-serif;
@@ -74,6 +78,14 @@ const GlobalStyle = createGlobalStyle`
 
   .section-title{
     font-size:20px;
+    font-weight:500;
+    color: ${(p) => p.theme.black};
+  }
+
+  .sub-section-title{
+    font-size:16px;
+    font-weight:500;
+    margin-bottom:15px;
     color: ${(p) => p.theme.black};
   }
 `;

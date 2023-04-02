@@ -5,8 +5,9 @@ export const BottomNavWrapper = styledComponents.div`
     bottom:0;
     left:0;
     width:100%;
-    background:${({ theme }) => theme.grey4};
+    background:${({ theme }) => theme.white};
     box-shadow:1px 1px 80px rgba(10,10,10,.3);
+    padding:20px 0;
    
 
     .bottom-nav-content{
@@ -31,8 +32,8 @@ export const BottomNavItemWrapper = styledComponents.div`
 
     .menu-text{
         text-align:center;
-        font-weight:300;
+        font-weight:${({ active }) => (active ? "500" : "300")};
         font-size:14px;
-        color:${({ theme }) => theme.black};
+        color:${({ active, theme }) => (active ? theme.black : theme.grey1)};
     }
 `;

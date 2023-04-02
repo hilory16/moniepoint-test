@@ -2,16 +2,14 @@ import styledComponents from "styled-components";
 
 export const ProductListWrapper = styledComponents.section`
     background:${({ theme }) => theme.grey2};
+    padding:30px 0 80px 0;
+
 
     .section-heading{
         display:flex;
         align-items:center;
         justify-content:space-between;
-        margin-bottom:20px;
-
-        .section-title{
-
-        }
+        margin-bottom:30px;
 
         .section-link{
             color:${({ theme }) => theme.green};
@@ -52,27 +50,35 @@ export const ProductListItemWrapper = styledComponents.div`
 
     .product-image{
         width:100%;
-        height:100px;
-        background:${({ theme }) => theme.green};
+        height:120px;
+        background:${({ theme }) => theme.grey2};
         border-top-left-radius:5px;
         border-top-right-radius:5px;
+
+        img{
+            width:100%;
+            height:100%;
+            object-fit:cover;
+        }
     }
 
     .product-item-content{
-        background:${({ theme }) => theme.white};
+        // background:${({ theme }) => theme.white};
         padding:15px 10px;
 
-        .product-description{
+        .product-item-description{
             .product-type{
                 color:${({ theme }) => theme.grey1};
                 font-size:12px;
                 margin-bottom:5px;
+                font-weight:300;
             }
 
             .product-name{
-                font-size:12px;
+                font-size:14px;
+                line-height:20px;
                 font-weight:500;
-                margin-bottom:15px;
+                margin-bottom:18px;
             }
         }
 
@@ -83,7 +89,7 @@ export const ProductListItemWrapper = styledComponents.div`
             color:${({ theme }) => theme.grey1};
 
             .product-price{
-                font-size:14px;
+                font-size:16px;
                 color:${({ theme }) => theme.green};
             }
 
@@ -91,7 +97,8 @@ export const ProductListItemWrapper = styledComponents.div`
                 display:flex;
                 align-items:center;
                 p{
-                    font-size:10px;
+                    font-size:12px;
+                     font-weight:300;
                 }
                svg{
                 fill:${({ theme }) => theme.gold};
@@ -100,5 +107,17 @@ export const ProductListItemWrapper = styledComponents.div`
                }
             }
         }
+    }
+`;
+
+export const ProductItemWrapper = styledComponents.div`
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    flex-wrap:wrap;
+
+    .products-item{
+        width:47%;
+        margin-bottom:35px;
     }
 `;

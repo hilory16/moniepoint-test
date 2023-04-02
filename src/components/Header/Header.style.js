@@ -5,6 +5,15 @@ export const HeaderWrapper = styledComponents.div`
     left:0;
     right:0;
     width:100%;
+    top:0;
+    padding:30px 0;
+    z-index:100;
+    transition:all ease .3s;
+
+    &.header-background{
+        background:${({ theme }) => theme.white};
+        box-shadow:1px 1px 25px rgba(0,0,0,.2);
+    }
 
     .header-content{
         display:flex;
@@ -13,16 +22,23 @@ export const HeaderWrapper = styledComponents.div`
         .search-input{
             display:flex;   
             align-items:center;
-            height:35px;
+            height:40px;
             border:1px solid ${({ theme }) => theme.grey1};
             padding:0 10px;
             border-radius:5px;
             margin-right:20px;
             width:100%;
+
+          
     
             input{
                 border:none;
                 background:${({ theme }) => theme.transparent};
+                color:${({ theme }) => theme.grey1};
+                
+                ::placeholder{
+                    color:${({ theme }) => theme.grey1};
+                }
             }
             svg{
                 margin-right:10px;
@@ -44,7 +60,7 @@ export const HeaderWrapper = styledComponents.div`
             }
     
             .icon-1{
-                margin-right:20px;
+                margin-right:25px;
             }
     
             .icon-2{

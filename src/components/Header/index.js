@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import classNames from "classnames";
 import { SearchNormal1, Bag2, MessageText } from "iconsax-react";
 import Badge from "components/Badge";
 import useTheme from "hooks/theme";
@@ -7,14 +8,29 @@ import { HeaderWrapper } from "./Header.style";
 
 export default function Header() {
   const [search, setSearch] = useState();
+  const [sticky, setSticky] = useState(false);
   const { theme } = useTheme();
   const { iconColor1, iconColor2, dimensions } = theme || {};
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset > "60") {
+        setSticky(true);
+      } else {
+        setSticky(false);
+      }
+    });
+  }, []);
+
   return (
-    <HeaderWrapper>
+    <HeaderWrapper className={classNames({ "header-background": sticky })}>
       <AppWrapper>
         <div className="header-content">
           <div className="search-input">
-            <SearchNormal1 size={dimensions.iconSize} color={iconColor1} />
+            <SearchNormal1
+              size={dimensions.iconMediumSize}
+              color={theme.grey1}
+            />
             <input
               type="text"
               value={search}

@@ -4,13 +4,10 @@ import { AppWrapper } from "components/Wrappers";
 import QuickActions from "components/QuickActions";
 import ProductList from "components/ProductList";
 import BottomNav from "components/BottomNav";
-import useTheme from "hooks/theme";
 
 export default function Home() {
-  const { switchTheme } = useTheme();
   return (
     <div>
-      {/* <p onClick={() => switchTheme("dark")}>Change</p> */}
       <Header />
       <Banner />
       <AppWrapper>

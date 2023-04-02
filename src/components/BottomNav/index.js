@@ -1,4 +1,8 @@
-import { Home, Wallet3, Setting, Ticket } from "iconsax-react";
+import { ReactComponent as HomeIcon } from "assets/icons/home.svg";
+import { ReactComponent as VoucherIcon } from "assets/icons/voucher.svg";
+import { ReactComponent as WalletIcon } from "assets/icons/wallet.svg";
+import { ReactComponent as SettingIcon } from "assets/icons/setting.svg";
+
 import { AppWrapper } from "components/Wrappers";
 import useTheme from "hooks/theme";
 import BottomNavItem from "./BottomNavItem";
@@ -9,25 +13,29 @@ export default function BottomNav() {
 
   const iconProps = {
     size: theme.iconMediumSize,
-    color: theme.iconSix,
+    color: theme.grey1,
   };
 
   const menuOptions = [
     {
-      icon: <Home {...iconProps} />,
+      icon: <HomeIcon {...iconProps} />,
       text: "Home",
+      active: true,
     },
     {
-      icon: <Ticket {...iconProps} variant="Outline" />,
+      icon: <VoucherIcon {...iconProps} variant="Outline" />,
       text: "Voucher",
+      active: false,
     },
     {
-      icon: <Wallet3 {...iconProps} />,
+      icon: <WalletIcon {...iconProps} />,
       text: "Wallet",
+      active: false,
     },
     {
-      icon: <Setting {...iconProps} />,
+      icon: <SettingIcon {...iconProps} />,
       text: "Settings",
+      active: false,
     },
   ];
   return (

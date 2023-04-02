@@ -3,7 +3,7 @@ import styledComponents from "styled-components";
 export const QuickActionsWrapper = styledComponents.div`
     display:flex;
     justify-content:space-between;
-    margin-bottom:30px;
+    margin:25px 0 30px 0;
 `;
 
 export const QuickActionItemWrapper = styledComponents.div`
@@ -12,19 +12,19 @@ export const QuickActionItemWrapper = styledComponents.div`
 
     .icon-container{
         background:${({ theme }) => theme.grey2};
-        width:35px;
-        height:35px;
+        width:40px;
+        height:40px;
         display:flex;
         justify-content:center;
         align-items:center;
-        border-radius:5px;
+        border-radius:6px;
         margin:0 auto 10px;
     }
 
     .quick-action-text{
         font-size:12px;
-        color:${({ theme }) => theme.black};
-        font-weight:400;
+        color:${({ theme }) => theme.grey1};
+        font-weight:300;
         text-align:center;
     }
   

@@ -33,11 +33,11 @@ export default function QuickActions() {
     },
     {
       text: "Data plan",
-      icon: <Global size="32" {...iconProps} />,
+      icon: <Global {...iconProps} />,
     },
     {
       text: "Top Up",
-      icon: <Coin1 size="32" {...iconProps} />,
+      icon: <Coin1 {...iconProps} />,
     },
   ];
 
