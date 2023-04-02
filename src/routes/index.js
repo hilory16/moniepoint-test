@@ -1,9 +1,10 @@
-import { createBrowserRouter } from "react-router-dom";
-
-import Home from "pages/home";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { ThemeProvider } from "styled-components";
+import GlobalStyle from "styles/global-styles";
+import useTheme from "hooks/theme";
+import Home from "pages/Home";
+import Product from "pages/Product";
 import Loader from "components/Loader";
-
-const James = () => <h1>James</h1>;
 
 const router = createBrowserRouter([
   {
@@ -12,10 +13,21 @@ const router = createBrowserRouter([
     loader: Loader,
   },
   {
-    path: "/james",
-    element: <James />,
+    path: "/product/:id",
+    element: <Product />,
     loader: Loader,
   },
 ]);
 
-export default router;
+function Routes() {
+  const { theme } = useTheme();
+
+  return (
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <RouterProvider router={router} />
+    </ThemeProvider>
+  );
+}
+
+export default Routes;
