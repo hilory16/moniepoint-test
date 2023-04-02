@@ -43,11 +43,11 @@ export default function Banner() {
     <BannerWrapper>
       <Slider {...settings}>
         {slides.map(({ title, desc, heading, image }, index) => (
-          <div className={`banner-slide-item slide-${index + 1}`}>
+          <div className={`banner-slide-item slide-${index + 1}`} key={title}>
             <div
               className="banner-background"
               style={{
-                backgroundImage: `url(${require(`../../assets/images/${image}`)})`,
+                backgroundImage: `url(${require(`assets/images/${image}`)})`,
               }}
             >
               <div className="banner-slide-content">

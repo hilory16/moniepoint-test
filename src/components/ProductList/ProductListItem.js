@@ -1,6 +1,6 @@
 import { Heart, Star1 } from "iconsax-react";
 import { Link } from "react-router-dom";
-import { string, number, bool } from "prop-types";
+import { string, number, bool, array } from "prop-types";
 import classNames from "classnames";
 import useTheme from "hooks/theme";
 import { ProductListItemWrapper } from "./ProductList.style";
@@ -54,7 +54,7 @@ export default function ProductListItem({
 
 ProductListItem.propTypes = {
   id: number,
-  images: string,
+  images: array,
   name: string,
   type: string,
   rating: number,

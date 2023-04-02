@@ -15,7 +15,7 @@ export default function Pagination() {
           <span className="active">1</span>
           <span>2</span>
           <span>3</span>
-          <span>...</span>
+          <span>.....</span>
         </div>
         <div className="right-arrow icons">
           <ArrowRight2 size="14" color={theme.black} />

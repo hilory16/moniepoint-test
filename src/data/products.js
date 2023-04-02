@@ -7,7 +7,7 @@ import Shirt6Img from "assets/images/shirt-6.jpeg";
 
 export const products = [
   {
-    images: [Shirt1Img],
+    images: [Shirt1Img, Shirt2Img, Shirt3Img, Shirt5Img],
     id: 1,
     image: "",
     name: "Essential Men's Short-Sleeve Crewneck T-Shirt",
@@ -168,7 +168,7 @@ export const products = [
     },
   },
   {
-    id: 5,
+    id: 6,
     images: [Shirt6Img],
     name: "Essential Men's Short-Sleeve Crewneck T-shirt",
     type: "Shirt",

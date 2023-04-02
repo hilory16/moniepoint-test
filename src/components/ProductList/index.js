@@ -15,7 +15,7 @@ export default function ProductList() {
 
         <ProductItemWrapper>
           {products.map((item) => (
-            <div className="products-item" key={item.name}>
+            <div className="products-item" key={item.id}>
               <ProductListItem {...item} />
             </div>
           ))}

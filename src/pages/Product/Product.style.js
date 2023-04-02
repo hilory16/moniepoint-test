@@ -1,5 +1,5 @@
 import styledComponents from "styled-components";
 
 export const ProductWrapper = styledComponents.div`
-    padding-top:80px;
+    padding-top:90px;
 `;

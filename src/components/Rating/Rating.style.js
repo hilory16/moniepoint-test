@@ -3,7 +3,7 @@ import styledComponents from "styled-components";
 export const CustomerRatingWrapper = styledComponents.section`
     margin-bottom:30px;
     padding-bottom:30px;
-    border-bottom:1px solid ${({ theme }) => theme.grey3};
+    border-bottom:1px solid ${({ theme }) => theme.grey2};
 
     .top{
         display:flex;
@@ -25,7 +25,7 @@ export const CustomerRatingWrapper = styledComponents.section`
             .customer-name{
                 font-size:14px;
                 font-weight:500;
-                color:${({ theme }) => theme.black};
+                color:${({ theme }) => theme.dark1};
             }   
         }
 
@@ -66,6 +66,7 @@ export const CustomerRatingWrapper = styledComponents.section`
         line-height:20px;
         font-weight:400;
         margin-bottom:16px;
+        color:${({ theme }) => theme.dark1};
     }
 
     .customer-review-action{

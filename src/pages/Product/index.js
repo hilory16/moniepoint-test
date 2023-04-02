@@ -14,7 +14,7 @@ export default function Product() {
     <ProductWrapper>
       <ProductHeader />
       <AppWrapper>
-        <ProductSlide />
+        <ProductSlide images={product.images} />
         <ProductDescription product={product} />
       </AppWrapper>
     </ProductWrapper>

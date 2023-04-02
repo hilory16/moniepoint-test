@@ -10,7 +10,7 @@ export default function Header() {
   const [search, setSearch] = useState();
   const [sticky, setSticky] = useState(false);
   const { theme } = useTheme();
-  const { iconColor1, iconColor2, dimensions } = theme || {};
+  const { iconColor2, dimensions } = theme || {};
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -34,7 +34,7 @@ export default function Header() {
             <input
               type="text"
               value={search}
-              setSearch={({ target: { value } }) => setSearch(value)}
+              onChange={({ target: { value } }) => setSearch(value)}
               placeholder="Search..."
             />
           </div>

@@ -11,7 +11,7 @@ export const SingleListWrapper = styledComponents.li`
     .title{
         color: ${({ theme }) => theme.grey1};
         margin-right:15px;
-        font-weight:300;
+        font-weight:400;
     }
 
     .value{

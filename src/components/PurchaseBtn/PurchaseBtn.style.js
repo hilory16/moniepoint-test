@@ -19,6 +19,7 @@ export const PurchaseBtnWrapper = styledComponents.div`
                 margin-bottom:8px;
                 color:${({ theme }) => theme.grey1};
                 font-size:12px;
+                font-weight:300;
             }
             h5{
                 color:${({ theme }) => theme.green};
@@ -54,7 +55,7 @@ export const PurchaseBtnWrapper = styledComponents.div`
         }
 
         .buy-now{
-            background:${({ theme }) => theme.black};
+            background:${({ theme }) => theme.dark1};
             height:100%;
             display:flex;
             align-items:center;

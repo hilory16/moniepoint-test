@@ -6,6 +6,9 @@ export const ProductHeaderWrapper = styledComponents.div`
     right:0;
     top:0;
     width:100%;
+    padding:30px 0;
+    background:${({ theme }) => theme.white};
+    z-index:100;
 
     .header-content{
         display:flex;

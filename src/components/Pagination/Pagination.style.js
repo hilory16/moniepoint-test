@@ -7,8 +7,8 @@ export const PaginationWrapper = styledComponents.div`
 
     .icons{
       border-radius:50%;
-      width:30px;
-      height:30px;
+      width:27px;
+      height:27px;
       display:flex;
       align-items:center;
       justify-content:center;
@@ -16,7 +16,7 @@ export const PaginationWrapper = styledComponents.div`
 
     .left-arrow{
       margin-right:17px;
-      background:${({ theme }) => theme.grey1};
+      background:${({ theme }) => theme.grey2};
     }
 
     .right-arrow{

@@ -79,14 +79,14 @@ const GlobalStyle = createGlobalStyle`
   .section-title{
     font-size:20px;
     font-weight:500;
-    color: ${(p) => p.theme.black};
+    color: ${(p) => p.theme.dark1};
   }
 
   .sub-section-title{
     font-size:16px;
     font-weight:500;
     margin-bottom:15px;
-    color: ${(p) => p.theme.black};
+    color: ${(p) => p.theme.dark1};
   }
 `;
 

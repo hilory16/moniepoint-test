@@ -1,4 +1,4 @@
-import { Heart, Star1, Shop, ArrowUp2 } from "iconsax-react";
+import { Star1, Shop, ArrowUp2 } from "iconsax-react";
 import { Link } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 import useTheme from "hooks/theme";
@@ -11,11 +11,14 @@ import PurchaseBtn from "components/PurchaseBtn";
 import ProductListItem from "components/ProductList/ProductListItem";
 import { products } from "data/products";
 import { ProductItemWrapper } from "components/ProductList/ProductList.style";
+import SellerInfo from "./SellerInfo";
+import ReviewsList from "./ReviewsList";
 import { ProductDescriptionWrapper } from "./ProductDescription.style";
 
 export default function ProductDescription({ product }) {
   const {
     name,
+    images,
     rating,
     reviewCount,
     ratingCount,
@@ -73,16 +76,11 @@ export default function ProductDescription({ product }) {
     },
   ];
 
-  const getPercentage = (val) => {
-    const total = ratingBreakdown.reduce((acc, current) => acc + current, 0);
-    return Math.ceil((val / total) * 100);
-  };
-
   return (
     <ProductDescriptionWrapper>
       <div className="store-area">
         <div className="store-details">
-          <Shop size={theme.iconSize} color={theme.grey1} />
+          <Shop size="18" color={theme.grey1} />
           <p className="store-name">{store}</p>
         </div>
         <h3 className="product-name">{name}</h3>
@@ -136,69 +134,12 @@ export default function ProductDescription({ product }) {
         </ul>
       </div>
 
-      <div className="seller-info">
-        <h4 className="sub-section-title">Seller Information :</h4>
-        <div className="seller-info-content">
-          <div className="store-display-picture"></div>
-          <div className="store-display-info">
-            <h5>Thrifting_Store</h5>
-            <p className="availability">
-              <span>Active {lastActive}</span> <span>|</span>
-              <span>{feedback} Positive Feedback</span>
-            </p>
-            <div className="visit-store-btn">
-              <Shop size="18" color={theme.green} />
-              <p>Visit Store</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="review-rating">
-        <h4 className="sub-section-title">Reviews & Ratings</h4>
-        <div className="review-rating-content">
-          <div className="average-rating">
-            <div>
-              <h5>
-                <span className="big"> 4.9 </span>
-                <span className="small">/ 5.0</span>
-              </h5>
-
-              <div className="full-stars">
-                {[1, 2, 3, 4, 5].map((item) => (
-                  <Star1 size="14" color={theme.gold} />
-                ))}
-              </div>
-            </div>
-
-            <p className="total-reviews">2.3k+ review</p>
-          </div>
-          <ul className="rating-breakdown">
-            {ratingBreakdown.map((item, index) => (
-              <li key={item}>
-                <div className="stars">
-                  <Star1 size="14" color={theme.gold} />
-                  <p>{5 - index}</p>
-                </div>
-                <div className="gauge">
-                  <div className="rating-meter"></div>
-                  <p className="actual-rating-figure">{numberUnit(item)}</p>
-                </div>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-
-      <div className="review-pictures">
-        <h4 className="sub-section-title">Reviews with images &amp; videos</h4>
-        <div className="review-image-list">
-          <div className="review-image"></div>
-          <div className="review-image"></div>
-          <div className="review-image"></div>
-          <div className="review-image"></div>
-        </div>
-      </div>
+      <SellerInfo lastActive={lastActive} feedback={feedback} theme={theme} />
+      <ReviewsList
+        ratingBreakdown={ratingBreakdown}
+        theme={theme}
+        images={images}
+      />
 
       <div className="top-reviews">
         <div className="section-header">
@@ -206,15 +147,12 @@ export default function ProductDescription({ product }) {
             <h4 className="sub-section-title">Top Reviews</h4>
             <p>Showing 3 of {numberUnit(ratingCount)}+ reviews</p>
           </div>
-
           <Select />
         </div>
 
-        <div>
-          {[1, 2, 3, 4].map((item) => (
-            <CustomerRating key={item} />
-          ))}
-        </div>
+        {[1, 2, 3, 4].map((item) => (
+          <CustomerRating key={item} />
+        ))}
         <div className="pagination-area">
           <Pagination />
           <Link to="#">
