@@ -1,0 +1,38 @@
+export const products = [
+  {
+    image: "",
+    name: "Essential Men's Short-Sleeve Crewneck T-shirt",
+    type: "Shirt",
+    rating: 4.9,
+    ratingCount: 2335,
+    price: "$12.00",
+    fav: true,
+  },
+  {
+    image: "",
+    name: "Essential Men's Short-Sleeve Crewneck T-shirt",
+    type: "Shirt",
+    rating: 4.9,
+    ratingCount: 2335,
+    price: "$12.00",
+    fav: false,
+  },
+  {
+    image: "",
+    name: "Essential Men's Short-Sleeve Crewneck T-shirt",
+    type: "Shirt",
+    rating: 4.9,
+    ratingCount: 2335,
+    price: "$12.00",
+    fav: true,
+  },
+  {
+    image: "",
+    name: "Essential Men's Short-Sleeve Crewneck T-shirt",
+    type: "Shirt",
+    rating: 4.9,
+    ratingCount: 2335,
+    price: "$12.00",
+    fav: false,
+  },
+];
