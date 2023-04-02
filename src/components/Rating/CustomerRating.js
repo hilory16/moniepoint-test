@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import { More, Star1, Like1 } from "iconsax-react";
 import useTheme from "hooks/theme";
 import { CustomerRatingWrapper } from "./Rating.style";

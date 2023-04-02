@@ -1,4 +1,5 @@
 import { Star1, Shop, ArrowUp2 } from "iconsax-react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 import useTheme from "hooks/theme";
@@ -15,7 +16,13 @@ import SellerInfo from "./SellerInfo";
 import ReviewsList from "./ReviewsList";
 import { ProductDescriptionWrapper } from "./ProductDescription.style";
 
+const options = [
+  { value: "popular", label: "Popular" },
+  { value: "others", label: "Others" },
+];
+
 export default function ProductDescription({ product }) {
+  const [select, setSelect] = useState(options[0]);
   const {
     name,
     images,
@@ -147,7 +154,9 @@ export default function ProductDescription({ product }) {
             <h4 className="sub-section-title">Top Reviews</h4>
             <p>Showing 3 of {numberUnit(ratingCount)}+ reviews</p>
           </div>
-          <Select />
+          <div className="sort-select">
+            <Select value={select} onChange={setSelect} options={options} />
+          </div>
         </div>
 
         {[1, 2, 3, 4].map((item) => (

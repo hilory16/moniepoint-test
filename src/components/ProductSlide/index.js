@@ -1,12 +1,9 @@
 import { useState } from "react";
 import { array } from "prop-types";
-import ImageGallery from "react-image-gallery";
-import "react-image-gallery/styles/css/image-gallery.css";
 import { ProductSlideWrapper } from "./ProductSlide.style";
 
 export default function ProductSlide({ images }) {
   const [active, setActive] = useState(images[0]);
-  console.log(images);
   return (
     <ProductSlideWrapper>
       <div className="featured-image">

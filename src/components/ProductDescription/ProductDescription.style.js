@@ -178,6 +178,10 @@ export const ProductDescriptionWrapper = styledComponents.div`
                 color:${({ theme }) => theme.grey1};
                 font-size:14px;
             }
+
+            .sort-select{
+                width:110px;
+            }
         }
 
         .pagination-area{
