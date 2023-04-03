@@ -22,7 +22,7 @@ export const HeaderWrapper = styledComponents.div`
         .search-input{
             display:flex;   
             align-items:center;
-            height:40px;
+            height:42px;
             border:1px solid ${({ theme }) => theme.grey1};
             padding:0 10px;
             border-radius:5px;
