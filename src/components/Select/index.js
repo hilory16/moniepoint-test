@@ -9,8 +9,6 @@ export default function Select({ options, value, onChange }) {
     onChange(selectedOption);
   };
 
-  console.log(value);
-
   const styles = {
     control: (base, state) => ({
       ...base,

@@ -1,22 +1,31 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import { array } from "prop-types";
+import { scrollReveal } from "utils/animations";
 import { ProductSlideWrapper } from "./ProductSlide.style";
 
 export default function ProductSlide({ images }) {
-  const [active, setActive] = useState(images[0]);
+  const [active, setActive] = useState();
+
+  useEffect(() => {
+    setActive(images[0]);
+  }, [images]);
+
   return (
-    <ProductSlideWrapper>
-      <div className="featured-image">
-        <img src={active} alt="" className="primary-img" />
-        <div className="image-options">
-          {images.map((item) => (
-            <div className="image-option-item" key={item}>
-              <img src={item} alt="" onClick={() => setActive(item)} />
-            </div>
-          ))}
+    <motion.div {...scrollReveal(0.3)}>
+      <ProductSlideWrapper>
+        <div className="featured-image">
+          <img src={active} alt="" className="primary-img" />
+          <div className="image-options">
+            {images.map((item) => (
+              <div className="image-option-item" key={item}>
+                <img src={item} alt="" onClick={() => setActive(item)} />
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
-    </ProductSlideWrapper>
+      </ProductSlideWrapper>
+    </motion.div>
   );
 }
 

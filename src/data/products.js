@@ -9,7 +9,6 @@ export const products = [
   {
     images: [Shirt1Img, Shirt2Img, Shirt3Img, Shirt5Img],
     id: 1,
-    image: "",
     name: "Essential Men's Short-Sleeve Crewneck T-Shirt",
     type: "Shirt",
     rating: 4.9,
@@ -42,7 +41,7 @@ export const products = [
   {
     id: 2,
     images: [Shirt2Img],
-    name: "Essential Men's Short-Sleeve Crewneck T-shirt",
+    name: "Short-Sleeve Crewneck Essential Men's T-shirt",
     type: "Shirt",
     rating: 4.9,
     ratingCount: 2335,
@@ -74,7 +73,7 @@ export const products = [
   {
     id: 3,
     images: [Shirt3Img],
-    name: "Essential Men's Short-Sleeve Crewneck T-shirt",
+    name: "Extra Men's Short-Sleeve Roundneck T-shirt",
     type: "Shirt",
     rating: 4.9,
     ratingCount: 2335,
@@ -106,7 +105,7 @@ export const products = [
   {
     id: 4,
     images: [Shirt5Img],
-    name: "Essential Men's Short-Sleeve Crewneck T-shirt",
+    name: "Essential Women's Short-Sleeve Crewneck T-shirt",
     type: "Shirt",
     rating: 4.9,
     ratingCount: 2335,

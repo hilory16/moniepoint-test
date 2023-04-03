@@ -16,6 +16,7 @@ export default function Banner() {
     cssEase: "linear",
     slidesToShow: 1,
     slidesToScroll: 1,
+    arrows: false,
   };
 
   const slides = [

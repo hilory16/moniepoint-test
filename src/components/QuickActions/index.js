@@ -29,6 +29,7 @@ export default function QuickActions() {
     dots: true,
     infinite: true,
     autoplay: false,
+    arrows: false,
     speed: 1000,
     autoplaySpeed: 2000,
     cssEase: "linear",

@@ -1,5 +1,6 @@
 import { Star1, Shop, ArrowUp2 } from "iconsax-react";
 import { useState } from "react";
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 import useTheme from "hooks/theme";
@@ -10,6 +11,7 @@ import Select from "components/Select";
 import Pagination from "components/Pagination";
 import PurchaseBtn from "components/PurchaseBtn";
 import ProductListItem from "components/ProductList/ProductListItem";
+import { scrollReveal } from "utils/animations";
 import { products } from "data/products";
 import { ProductItemWrapper } from "components/ProductList/ProductList.style";
 import SellerInfo from "./SellerInfo";
@@ -85,7 +87,7 @@ export default function ProductDescription({ product }) {
 
   return (
     <ProductDescriptionWrapper>
-      <div className="store-area">
+      <motion.div {...scrollReveal(0.4)} className="store-area">
         <div className="store-details">
           <Shop size="18" color={theme.grey1} />
           <p className="store-name">{store}</p>
@@ -99,9 +101,9 @@ export default function ProductDescription({ product }) {
           <li className="product-reviews">{reviewCount} Reviews</li>
           <li className="product-sold">{sold} Sold</li>
         </ul>
-      </div>
+      </motion.div>
 
-      <div className="product-info">
+      <motion.div {...scrollReveal(0.5)} className="product-info">
         <ul className="product-info-tab">
           <li className="active">About Item</li>
           <li>Reviews</li>
@@ -112,9 +114,9 @@ export default function ProductDescription({ product }) {
             <SingleList key={uuidv4()} {...item} />
           ))}
         </ul>
-      </div>
+      </motion.div>
 
-      <div className="product-description">
+      <motion.div {...scrollReveal(0.5)} className="product-description">
         <h4 className="sub-section-title">Description:</h4>
         <ul className="product-description-list">
           {description.map((item) => (
@@ -130,16 +132,16 @@ export default function ProductDescription({ product }) {
           <span>See less</span>
           <ArrowUp2 size="16" color={theme.grey1} />
         </div>
-      </div>
+      </motion.div>
 
-      <div className="shipping-info">
+      <motion.div {...scrollReveal(0.5)} className="shipping-info">
         <h4 className="sub-section-title">Shippings Information:</h4>
         <ul className="shipping-info-list">
           {shipping.map((item) => (
             <SingleList key={uuidv4()} {...item} />
           ))}
         </ul>
-      </div>
+      </motion.div>
 
       <SellerInfo lastActive={lastActive} feedback={feedback} theme={theme} />
       <ReviewsList
@@ -148,7 +150,7 @@ export default function ProductDescription({ product }) {
         images={images}
       />
 
-      <div className="top-reviews">
+      <motion.div {...scrollReveal(0.5)} className="top-reviews">
         <div className="section-header">
           <div>
             <h4 className="sub-section-title">Top Reviews</h4>
@@ -168,9 +170,9 @@ export default function ProductDescription({ product }) {
             <p className="see-more">See more</p>
           </Link>
         </div>
-      </div>
+      </motion.div>
 
-      <div className="product-recommendation">
+      <motion.div {...scrollReveal(0.5)} className="product-recommendation">
         <div className="product-recommendation-heading">
           <h4 className="sub-section-title">Recommendation</h4>
           <Link className="section-link">See more</Link>
@@ -182,7 +184,7 @@ export default function ProductDescription({ product }) {
             </div>
           ))}
         </ProductItemWrapper>
-      </div>
+      </motion.div>
 
       <PurchaseBtn price={priceValue} />
     </ProductDescriptionWrapper>

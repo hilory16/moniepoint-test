@@ -1,33 +1,20 @@
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import GlobalStyle from "styles/global-styles";
 import useTheme from "hooks/theme";
-import Home from "pages/Home";
-import Product from "pages/Product";
-import Loader from "components/Loader";
+import AnimatedRoutes from "components/AnimatedRoutes";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Home />,
-    loader: Loader,
-  },
-  {
-    path: "/product/:id",
-    element: <Product />,
-    loader: Loader,
-  },
-]);
-
-function Routes() {
+function Index() {
   const { theme } = useTheme();
 
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <RouterProvider router={router} />
+      <Router>
+        <AnimatedRoutes />
+      </Router>
     </ThemeProvider>
   );
 }
 
-export default Routes;
+export default Index;
