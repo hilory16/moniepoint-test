@@ -11,6 +11,7 @@ const GlobalStyle = createGlobalStyle`
 
   html {
     scroll-behavior: smooth;
+    -webkit-transform: translate3d(0, 0, 0);
   }
 
   html,
