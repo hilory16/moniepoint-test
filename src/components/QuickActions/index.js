@@ -27,12 +27,10 @@ export default function QuickActions() {
 
   const settings = {
     dots: true,
-    infinite: true,
+    infinite: false,
     autoplay: false,
     arrows: false,
     speed: 1000,
-    autoplaySpeed: 2000,
-    cssEase: "linear",
     slidesToShow: 5,
     slidesToScroll: 5,
     appendDots: (dots) => (
