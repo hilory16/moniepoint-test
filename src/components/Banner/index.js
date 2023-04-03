@@ -11,7 +11,7 @@ export default function Banner() {
     dots: false,
     infinite: true,
     autoplay: true,
-    speed: 1500,
+    speed: 600,
     autoplaySpeed: 2500,
     cssEase: "ease",
     useTransform: true,
