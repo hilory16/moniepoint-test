@@ -13,13 +13,15 @@ export default function Home() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0, transition: { duration: 0.3 } }}
     >
-      <Header />
-      <Banner />
-      <AppWrapper>
-        <QuickActions />
-      </AppWrapper>
-      <ProductList />
-      <BottomNav />
+      <div>
+        <Header />
+        <Banner />
+        <AppWrapper>
+          <QuickActions />
+        </AppWrapper>
+        <ProductList />
+        <BottomNav />
+      </div>
     </motion.div>
   );
 }
