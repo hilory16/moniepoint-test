@@ -7,7 +7,7 @@ export const PurchaseBtnWrapper = styledComponents.div`
     box-shadow:1px 1px 20px rgba(0,0,0,.15);
     left:0;
     width:100%;
-    padding:22px 0;
+    padding:20px 0;
 
     .purchase-btn-content{
         display:flex;

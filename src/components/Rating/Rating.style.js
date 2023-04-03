@@ -56,7 +56,7 @@ export const CustomerRatingWrapper = styledComponents.section`
             background:${({ theme }) => theme.green2};
             color:${({ theme }) => theme.green};
             border:1px solid ${({ theme }) => theme.green};
-            padding:7px 10px;
+            padding:5px 7px;
             border-radius:20px;
         }
     }

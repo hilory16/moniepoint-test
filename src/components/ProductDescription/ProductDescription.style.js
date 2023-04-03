@@ -101,7 +101,7 @@ export const ProductDescriptionWrapper = styledComponents.div`
             margin-bottom:30px;
 
             li{
-                width:45%;
+                width:50%;
         
                 :nth-child(even){
                     text-align:left;
@@ -235,7 +235,7 @@ export const SellerInfoWrapper = styledComponents.div`
             height:70px;
             background:${({ theme }) => theme.grey1};
             border-radius:50%;
-            margin-right:20px;
+            margin-right:16px;
             flex-shrink: 0;
             position:relative;
 
@@ -285,6 +285,10 @@ export const SellerInfoWrapper = styledComponents.div`
                     display:block;
                     margin-right:12px;
                     font-weight:300;
+
+                    :last-child{
+                        margin-right:0;
+                    }
                 }
             }
         }
