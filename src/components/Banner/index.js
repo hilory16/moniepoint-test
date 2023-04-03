@@ -14,7 +14,6 @@ export default function Banner() {
     speed: 2000,
     autoplaySpeed: 3000,
     cssEase: "ease",
-    useTransform: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
