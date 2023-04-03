@@ -17,6 +17,7 @@ export default function Banner() {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
+    pauseOnHover: true,
   };
 
   const slides = [
