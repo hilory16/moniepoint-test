@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Helmet from "react-helmet";
 import { motion } from "framer-motion";
 import { useParams } from "react-router-dom";
 import { products } from "data/products";
@@ -26,6 +27,9 @@ export default function Product() {
       }}
     >
       <ProductWrapper>
+        <Helmet>
+          <title>Product | {`${product?.name}`}</title>
+        </Helmet>
         <ProductHeader />
         <AppWrapper>
           <ProductSlide images={product.images} />

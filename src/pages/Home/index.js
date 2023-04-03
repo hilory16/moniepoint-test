@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Helmet from "react-helmet";
 import Banner from "components/Banner";
 import Header from "components/Header";
 import { AppWrapper } from "components/Wrappers";
@@ -21,6 +22,9 @@ export default function Home() {
       }}
       exit={{ opacity: 0, transition: { duration: 0.5 } }}
     >
+      <Helmet>
+        <title>HOME</title>
+      </Helmet>
       <Header />
       <Banner />
       <AppWrapper>
