@@ -1,27 +1,36 @@
-// import { motion } from "framer-motion";
-import Banner from "components/Banner";
-import Header from "components/Header";
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import { useParams } from "react-router-dom";
+import { products } from "data/products";
+import ProductHeader from "components/ProductHeader";
+import ProductSlide from "components/ProductSlide";
 import { AppWrapper } from "components/Wrappers";
-import QuickActions from "components/QuickActions";
-import ProductList from "components/ProductList";
-import BottomNav from "components/BottomNav";
+import ProductDescription from "components/ProductDescription";
+// import { ProductWrapper } from "./Product.style";
 
-export default function Home() {
+export default function Product() {
+  const { id } = useParams();
+  const [product, setProduct] = useState(products[0]);
+
+  useEffect(() => {
+    setProduct(products.find((item) => item.id === +id));
+  }, [id]);
+
   return (
-    // <motion.div
-    //   initial={{ opacity: 0 }}
-    //   animate={{ opacity: 1 }}
-    //   exit={{ opacity: 0, transition: { duration: 0.3 } }}
-    // >
-    <div>
-      <Header />
-      <Banner />
+    <motion.div
+      exit={{
+        opacity: 0,
+        y: "50px",
+        transition: { duration: 0.3 },
+      }}
+    >
+      {/* <ProductWrapper> */}
+      <ProductHeader />
       <AppWrapper>
-        <QuickActions />
+        <ProductSlide images={product.images} />
+        <ProductDescription product={product} />
       </AppWrapper>
-      <ProductList />
-      <BottomNav />
-    </div>
-    // </motion.div>
+      {/* </ProductWrapper> */}
+    </motion.div>
   );
 }
