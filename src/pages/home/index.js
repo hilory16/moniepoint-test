@@ -12,13 +12,6 @@ export default function Home() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0, transition: { duration: 0.3 } }}
-      // initial={{ y: 0 }}
-      // animate={{ y: 0 }}
-      // exit={{
-      //   y: "-100vh",
-      //   background: "white",
-      //   opacity: 0,
-      // }}
     >
       <Header />
       <Banner />

@@ -1,7 +1,6 @@
 import Shirt1Img from "assets/images/shirt-1.jpeg";
 import Shirt2Img from "assets/images/shirt-2.jpg";
 import Shirt3Img from "assets/images/shirt-3.jpeg";
-// import Shirt4Img from "assets/images/shirt-4.jpeg";
 import Shirt5Img from "assets/images/shirt-5.jpeg";
 import Shirt6Img from "assets/images/shirt-6.jpeg";
 

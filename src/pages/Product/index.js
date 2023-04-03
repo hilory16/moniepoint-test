@@ -13,7 +13,6 @@ export default function Product() {
   const [product, setProduct] = useState(products[0]);
 
   useEffect(() => {
-    // window.scroll(0, 0);
     setProduct(products.find((item) => item.id === +id));
   }, [id]);
 

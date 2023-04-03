@@ -30,7 +30,6 @@ const lightTheme = {
   red: "#E55986",
   dark1: "#2B2D41",
   grey1: "#ababab",
-  // grey2: "#f6f6f6",
   grey2: "#f0f0f0",
   grey3: "#65677e",
   grey4: "#f5f5f5",
