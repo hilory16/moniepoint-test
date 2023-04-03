@@ -8,16 +8,18 @@ export default function ProductSlide({ images }) {
   const [active, setActive] = useState();
 
   useEffect(() => {
-    setActive(images[0]);
+    if (images) {
+      setActive(images[0]);
+    }
   }, [images]);
 
   return (
-    <motion.div {...scrollReveal(0.3)}>
+    <motion.div {...scrollReveal(0.4)}>
       <ProductSlideWrapper>
         <div className="featured-image">
           <img src={active} alt="" className="primary-img" />
           <div className="image-options">
-            {images.map((item) => (
+            {images?.map((item) => (
               <div className="image-option-item" key={item}>
                 <img src={item} alt="" onClick={() => setActive(item)} />
               </div>

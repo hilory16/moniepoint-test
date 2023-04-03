@@ -64,7 +64,7 @@ export const BannerWrapper = styled.div`
 
       .banner-promo {
         font-size: 36px;
-        font-weight: 500;
+        font-weight: 600;
         margin-bottom: 5px;
         text-transform: capitalize;
         color: ${({ theme }) => theme.dark1};
@@ -95,18 +95,20 @@ export const BannerWrapper = styled.div`
   }
 
   .banner-slide-item.slide-2 {
-    .banner-background {
-      background-position: center right;
-    }
-
     .banner-slide-content {
       width: 60%;
 
       .banner-promo {
         font-size: 18px;
         line-height: 24px;
-        font-weight: 500;
+        font-weight: 600;
       }
+    }
+  }
+
+  .banner-slide-item.slide-1 {
+    .banner-background {
+      background-position: center right;
     }
   }
 `;

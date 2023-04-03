@@ -6,7 +6,7 @@ import { SellerInfoWrapper } from "./ProductDescription.style";
 
 export default function SellerInfo({ lastActive, feedback, theme }) {
   return (
-    <motion.div {...scrollReveal(0.5)}>
+    <motion.div {...scrollReveal(1)}>
       <SellerInfoWrapper className="seller-info">
         <h4 className="sub-section-title">Seller Information :</h4>
         <div className="seller-info-content">

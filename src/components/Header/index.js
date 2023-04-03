@@ -27,10 +27,7 @@ export default function Header() {
       <AppWrapper>
         <div className="header-content">
           <div className="search-input">
-            <SearchNormal1
-              size={dimensions.iconMediumSize}
-              color={theme.grey1}
-            />
+            <SearchNormal1 size="20" color={theme.grey1} />
             <input
               type="text"
               value={search}

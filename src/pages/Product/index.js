@@ -10,9 +10,10 @@ import { ProductWrapper } from "./Product.style";
 
 export default function Product() {
   const { id } = useParams();
-  const [product, setProduct] = useState(products[0]);
+  const [product, setProduct] = useState({});
 
   useEffect(() => {
+    window.scroll(0, 0);
     setProduct(products.find((item) => item.id === +id));
   }, [id]);
 
@@ -20,8 +21,8 @@ export default function Product() {
     <motion.div
       exit={{
         opacity: 0,
-        y: "50px",
-        transition: { duration: 0.3 },
+        y: "100px",
+        transition: { duration: 0.5 },
       }}
     >
       <ProductWrapper>

@@ -1,11 +1,3 @@
-const breakPoints = {
-  xs: "576px",
-  sm: "767px",
-  md: "1023px",
-  lg: "1360px",
-  xl: "1440px",
-};
-
 const dimensions = {
   iconSmallSize: "18",
   iconSize: "22",
@@ -15,14 +7,11 @@ const dimensions = {
 const lightTheme = {
   text: "#000000",
   textPrimary: "#2B2D41",
-  textSecondary: "#4A22B3",
   textAnchor: "#4DAB96",
   textAnchorHover: "#4DAB96",
   background: "#FFFFFF",
   placeholder: "#A3A3A3",
   primaryBackground: "#4A22B3",
-  secondaryBackground: "#00FFCB",
-  tertiaryBackground: "#F0F0FB",
   iconColor1: "#D1D3D3",
   iconColor2: "#000000",
   white: "#FFFFFF",
@@ -40,21 +29,17 @@ const lightTheme = {
   error: "#FF3002",
   success: "#00FFCB",
   transparent: "transparent",
-  breakPoints,
   dimensions,
 };
 
 const darkTheme = {
   text: "#000000",
   textPrimary: "#000000",
-  textSecondary: "#4A22B3",
   textAnchor: "#4DAB96",
   textAnchorHover: "#4DAB96",
   background: "#FFFFFF",
   placeholder: "#A3A3A3",
   primaryBackground: "#4A22B3",
-  secondaryBackground: "#00FFCB",
-  tertiaryBackground: "#F0F0FB",
   iconColor1: "#D1D3D3",
   iconColor2: "#000000",
   white: "#FFFFFF",
@@ -72,7 +57,6 @@ const darkTheme = {
   gold: "#F9A23B",
   success: "#00FFCB",
   transparent: "transparent",
-  breakPoints,
   dimensions,
 };
 

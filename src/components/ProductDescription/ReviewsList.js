@@ -14,7 +14,7 @@ export default function ReviewsList({ ratingBreakdown, theme, images }) {
   };
 
   return (
-    <motion.div {...scrollReveal(0.5)}>
+    <motion.div {...scrollReveal(1)}>
       <ReviewsListWrapper>
         <div className="review-rating">
           <h4 className="sub-section-title">Reviews & Ratings</h4>
@@ -36,7 +36,7 @@ export default function ReviewsList({ ratingBreakdown, theme, images }) {
               <p className="total-reviews">2.3k+ review</p>
             </div>
             <ul className="rating-breakdown">
-              {ratingBreakdown.map((item, index) => (
+              {ratingBreakdown?.map((item, index) => (
                 <li key={item}>
                   <div className="stars">
                     <Star1 size="14" color={theme.gold} />
@@ -57,7 +57,7 @@ export default function ReviewsList({ ratingBreakdown, theme, images }) {
             Reviews with images &amp; videos
           </h4>
           <div className="review-image-list">
-            {images.slice(0, 4).map((item, index) => (
+            {images?.slice(0, 4).map((item, index) => (
               <div
                 className={classNames("review-image", {
                   "review-image-last": index === 3,

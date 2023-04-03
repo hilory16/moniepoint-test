@@ -35,9 +35,13 @@ export const HeaderWrapper = styledComponents.div`
                 border:none;
                 background:${({ theme }) => theme.transparent};
                 color:${({ theme }) => theme.grey1};
+                font-size:14px;
+                font-weight:300;
                 
                 ::placeholder{
                     color:${({ theme }) => theme.grey1};
+                    font-size:15px;
+                    font-weight:300;
                 }
             }
             svg{

@@ -87,7 +87,7 @@ export default function ProductDescription({ product }) {
 
   return (
     <ProductDescriptionWrapper>
-      <motion.div {...scrollReveal(0.4)} className="store-area">
+      <motion.div {...scrollReveal(0.6)} className="store-area">
         <div className="store-details">
           <Shop size="18" color={theme.grey1} />
           <p className="store-name">{store}</p>
@@ -103,23 +103,23 @@ export default function ProductDescription({ product }) {
         </ul>
       </motion.div>
 
-      <motion.div {...scrollReveal(0.5)} className="product-info">
+      <motion.div {...scrollReveal(0.8)} className="product-info">
         <ul className="product-info-tab">
           <li className="active">About Item</li>
           <li>Reviews</li>
         </ul>
 
         <ul className="about-prouduct-item">
-          {aboutItem.map((item) => (
+          {aboutItem?.map((item) => (
             <SingleList key={uuidv4()} {...item} />
           ))}
         </ul>
       </motion.div>
 
-      <motion.div {...scrollReveal(0.5)} className="product-description">
+      <motion.div {...scrollReveal(1)} className="product-description">
         <h4 className="sub-section-title">Description:</h4>
         <ul className="product-description-list">
-          {description.map((item) => (
+          {description?.map((item) => (
             <li key={item}>{item}</li>
           ))}
         </ul>
@@ -134,10 +134,10 @@ export default function ProductDescription({ product }) {
         </div>
       </motion.div>
 
-      <motion.div {...scrollReveal(0.5)} className="shipping-info">
+      <motion.div {...scrollReveal(1)} className="shipping-info">
         <h4 className="sub-section-title">Shippings Information:</h4>
         <ul className="shipping-info-list">
-          {shipping.map((item) => (
+          {shipping?.map((item) => (
             <SingleList key={uuidv4()} {...item} />
           ))}
         </ul>
@@ -150,7 +150,7 @@ export default function ProductDescription({ product }) {
         images={images}
       />
 
-      <motion.div {...scrollReveal(0.5)} className="top-reviews">
+      <motion.div {...scrollReveal(1)} className="top-reviews">
         <div className="section-header">
           <div>
             <h4 className="sub-section-title">Top Reviews</h4>
@@ -172,7 +172,7 @@ export default function ProductDescription({ product }) {
         </div>
       </motion.div>
 
-      <motion.div {...scrollReveal(0.5)} className="product-recommendation">
+      <motion.div {...scrollReveal(1)} className="product-recommendation">
         <div className="product-recommendation-heading">
           <h4 className="sub-section-title">Recommendation</h4>
           <Link className="section-link">See more</Link>
