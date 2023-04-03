@@ -14,11 +14,10 @@ export default function Banner() {
     speed: 1500,
     autoplaySpeed: 3000,
     cssEase: "ease",
-    lazyLoad: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
-    pauseOnHover: true,
+    pauseOnHover: false,
   };
 
   const slides = [
