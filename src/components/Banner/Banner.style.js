@@ -3,13 +3,13 @@ import styled from "styled-components";
 export const BannerWrapper = styled.div`
   height: 35vh;
 
-  .slick-slider,
-  .slick-list,
-  .slick-track,
-  .slick-slide,
-  .slick-slide > div {
-    height: 100%;
-  }
+  // .slick-slider,
+  // .slick-list,
+  // .slick-track,
+  // .slick-slide,
+  // .slick-slide > div {
+  //   height: 100%;
+  // }
 
   .banner-slide-item {
     width: 100%;
