@@ -13,7 +13,7 @@ export default function Banner() {
     autoplay: true,
     speed: 1000,
     autoplaySpeed: 1000,
-    cssEase: "ease",
+    cssEase: "linear",
     useTransform: true,
     slidesToShow: 1,
     slidesToScroll: 1,
