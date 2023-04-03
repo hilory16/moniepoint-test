@@ -7,8 +7,7 @@ export const BottomNavWrapper = styledComponents.div`
     width:100%;
     background:${({ theme }) => theme.white};
     box-shadow:1px 1px 80px rgba(10,10,10,.3);
-    padding:20px 0;
-   
+    padding:15px 0;
 
     .bottom-nav-content{
         display:flex;
@@ -20,20 +19,17 @@ export const BottomNavWrapper = styledComponents.div`
 
 export const BottomNavItemWrapper = styledComponents.div`
     .bottom-nav-icon{
-        margin-bottom:10px;
+        margin-bottom:8px;
 
         display:flex;
         justify-content:center;
         align-items:center;
-        svg{
-
-        }
     }
 
     .menu-text{
         text-align:center;
         font-weight:${({ active }) => (active ? "500" : "300")};
-        font-size:14px;
+        font-size:13px;
         color:${({ active, theme }) => (active ? theme.black : theme.grey1)};
     }
 `;

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const BannerWrapper = styled.div`
-  height: 37vh;
+  height: 36vh;
 
   .slick-slider,
   .slick-list,
