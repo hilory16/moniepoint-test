@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const BannerWrapper = styled.div`
-  height: 36vh;
+  height: 279px;
 
   .slick-slider,
   .slick-list,
@@ -27,7 +27,7 @@ export const BannerWrapper = styled.div`
       align-items: flex-end;
       height: 100%;
       width: 50%;
-      padding-bottom: 20px;
+      padding-bottom: 25px;
 
       .banner-title {
         font-size: 12px;
