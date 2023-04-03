@@ -1,6 +1,5 @@
-import React from "react";
 import Slider from "react-slick";
-import { AppWrapper } from "components/Wrappers";
+import { AppWrapper, DotWrapper, DotContent } from "components/Wrappers";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { BannerWrapper } from "./Banner.style";
@@ -8,7 +7,7 @@ import { Link } from "react-router-dom";
 
 export default function Banner() {
   const settings = {
-    dots: false,
+    dots: true,
     infinite: true,
     autoplay: true,
     speed: 700,
@@ -18,6 +17,12 @@ export default function Banner() {
     slidesToScroll: 1,
     arrows: false,
     pauseOnHover: true,
+    appendDots: (dots) => (
+      <DotWrapper>
+        <ul style={{ margin: "0px" }}>{dots}</ul>
+      </DotWrapper>
+    ),
+    customPaging: () => <DotContent className="dot-li-content"></DotContent>,
   };
 
   const slides = [

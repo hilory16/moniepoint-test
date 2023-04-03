@@ -11,15 +11,12 @@ import {
   Spotify,
 } from "iconsax-react";
 import Slider from "react-slick";
+import { DotWrapper, DotContent } from "components/Wrappers";
 import useTheme from "hooks/theme";
 import QuickActionItem from "./QuickActionItem";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import {
-  QuickActionsWrapper,
-  DotWrapper,
-  DotContent,
-} from "./QuickActions.style";
+import { QuickActionsWrapper } from "./QuickActions.style";
 
 export default function QuickActions() {
   const { theme } = useTheme();

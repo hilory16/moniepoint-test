@@ -11,6 +11,20 @@ export const BannerWrapper = styled.div`
     height: 100%;
   }
 
+  .slick-dots {
+    position: absolute;
+    bottom: unset;
+    justify-content: flex-end;
+    display: flex;
+    top: 31%;
+
+    li {
+      width: 5px;
+      height: 5px;
+      margin: 1px;
+    }
+  }
+
   .banner-slide-item {
     width: 100%;
     height: 100%;
@@ -75,7 +89,7 @@ export const BannerWrapper = styled.div`
 
       .banner-promo {
         font-size: 18px;
-        line-height: 24px;
+        line-height: 26px;
         font-weight: 600;
       }
     }
